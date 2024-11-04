@@ -26,9 +26,4 @@ export default [
     description: "Displays the weather forecast",
     execute: executor.weather,
   },
-  {
-    name: ["motd"],
-    description: "Displays a random famous quote",
-    execute: executor.motd,
-  },
 ];

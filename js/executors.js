@@ -1,32 +1,21 @@
 import { dateDiffInMinutes, error, getWeather, render } from "./helpers.js";
 import shortcuts from "./shortcuts.js";
 
+// Helper function to process URLs (same as in main.js)
+function processUrl(url) {
+  // Check if it's a local IP address without protocol
+  if (url.match(/^[\d.]+:\d+$/)) {
+    return `http://${url}`;
+  }
+  // If it already has a protocol, return as is
+  if (url.startsWith('http://') || url.startsWith('https://')) {
+    return url;
+  }
+  // Add https:// for all other URLs
+  return `https://${url}`;
+}
+
 export default {
-  motd: () => {
-    let cachedQuote = localStorage.getItem("cachedQuote");
-    if (cachedQuote) {
-      cachedQuote = JSON.parse(cachedQuote);
-      if (
-        dateDiffInMinutes(parseInt(cachedQuote.fetchedAt), Date.now()) < 720
-      ) {
-        render(`"${cachedQuote.content}" - ${cachedQuote.author}`);
-        return;
-      }
-    }
-    fetch("https://api.quotable.io/random?tags=technology")
-      .then((res) => res.json())
-      .then((data) => {
-        render(`"${data.content}" - ${data.author}`);
-        localStorage.setItem(
-          "cachedQuote",
-          JSON.stringify({
-            content: data.content,
-            author: data.author,
-            fetchedAt: Date.now().toString(),
-          })
-        );
-      });
-  },
   weather: (options) => {
     let usage = `
           <p>Usage: weather [set key &lt;key&gt;] [set loc &lt;city,state,country&gt;]</p>
@@ -66,7 +55,8 @@ export default {
       shortcuts.forEach((s) => {
         shortcutsOutput += `<div class="shortcuts"><p class="${s.color}">~/${s.category}</p>`;
         Object.entries(s.items).forEach(([name, link]) => {
-          shortcutsOutput += `<p><span class="${s.color}">> </span><a class="shortcut" href="${link}">${name}</a></p>`;
+          const processedLink = processUrl(link);
+          shortcutsOutput += `<p><span class="${s.color}">> </span><a class="shortcut" href="${processedLink}">${name}</a></p>`;
         });
         shortcutsOutput += "</div>";
       });

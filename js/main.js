@@ -15,6 +15,20 @@ terminal.addEventListener("click", (e) => {
   }
 });
 
+// Helper function to process URLs
+function processUrl(url) {
+  // Check if it's a local IP address without protocol
+  if (url.match(/^[\d.]+:\d+$/)) {
+    return `http://${url}`;
+  }
+  // If it already has a protocol, return as is
+  if (url.startsWith('http://') || url.startsWith('https://')) {
+    return url;
+  }
+  // Add https:// for all other URLs
+  return `https://${url}`;
+}
+
 input.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
     const userInput = input.value.trim().split(" ");
@@ -34,8 +48,9 @@ input.addEventListener("keydown", function (e) {
           .find(([i]) => i.toLowerCase().startsWith(command));
         if (shortcutDetails) {
           console.log(shortcutDetails);
+          const processedUrl = processUrl(shortcutDetails[1]);
           render(`Redirecting to ${shortcutDetails[0]}...`);
-          window.location.href = shortcutDetails[1];
+          window.location.href = processedUrl;
         } else error("yellow", command, "command not found");
       }
     } catch (e) {
@@ -47,7 +62,6 @@ input.addEventListener("keydown", function (e) {
 
 window.addEventListener("load", () => {
   executors.ls();
-  executors.motd();
   let filenames = ["purple-flower.jpg", "purplelily.jpg"];
   let root = document.getElementsByTagName("html")[0];
   root.style.backgroundImage = `url("./backgrounds/${
