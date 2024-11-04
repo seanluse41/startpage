@@ -40,9 +40,9 @@ export default [
     color: "yellow",
     items: {
       "Amazon JP": "https://amazon.co.jp",
-      Immich: "http://192.168.50.110:2283",
-      Jellyfin: "http://192.168.50.110:8096",
-      Radarr: "http://192.168.50.110:7878",
+      Immich: "192.168.50.110:2283",
+      Jellyfin: "192.168.50.110:8096",
+      Radarr: "192.168.50.110:7878",
       Drive: "https://drive.google.com"
     },
   }
