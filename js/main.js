@@ -62,7 +62,7 @@ input.addEventListener("keydown", function (e) {
 
 window.addEventListener("load", () => {
   executors.ls();
-  let filenames = ["purple-flower.jpg", "purplelily.jpg"];
+  let filenames = ["purple-flower.jpg", "purplelily.jpg", "purple-dune.jpg", "purple-mountains.jpg"];
   let root = document.getElementsByTagName("html")[0];
   root.style.backgroundImage = `url("./backgrounds/${
     filenames[Math.floor(Math.random() * filenames.length)]
