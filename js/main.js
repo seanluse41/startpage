@@ -5,6 +5,15 @@ import shortcuts from "./shortcuts.js";
 
 const input = document.getElementById("input");
 const output = document.getElementById("output");
+const terminal = document.getElementById("terminal");
+
+// Add click handler for terminal area
+terminal.addEventListener("click", (e) => {
+  // Only focus input if we didn't click a link or the input itself
+  if (!e.target.classList.contains("shortcut") && e.target !== input) {
+    input.focus();
+  }
+});
 
 input.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {

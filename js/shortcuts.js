@@ -8,7 +8,10 @@ export default [
       Cybozu: "https://sean.cybozu.com",
       "Dev.to": "https://dev.to",
       Porkbun: "https;//porkbun.com",
-      Netlify: "https://www.netlify.com/"
+      Netlify: "https://www.netlify.com/",
+      Claude: "https://claude.ai",
+      Stripe: "https://dashboard.stripe.com/",
+      "LINE Dev": "https://developers.line.biz/console/"
     },
   },
   {
@@ -28,7 +31,19 @@ export default [
       Linkedin: "https://linkedin.com",
       Twitter: "https://twitter.com",
       YouTube: "https://www.youtube.com/",
-      Discord: "https://discord.com/channels/@me"
+      Discord: "https://discord.com/channels/@me",
+      Gmail: "https://mail.google.com"
+    },
+  },
+  {
+    category: "Other",
+    color: "yellow",
+    items: {
+      "Amazon JP": "https://amazon.co.jp",
+      Immich: "http://192.168.50.110:2283",
+      Jellyfin: "http://192.168.50.110:8096",
+      Radarr: "http://192.168.50.110:7878",
+      Drive: "https://drive.google.com"
     },
   }
 ];
