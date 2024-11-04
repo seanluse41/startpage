@@ -3,42 +3,32 @@ export default [
     category: "Dev",
     color: "cyan",
     items: {
-      Github: "https://github.com",
-      AWS: "https://aws.amazon.com",
+      Github: "https://github.com/seanluse41?tab=repositories",
+      Kintone: "https://sean.kintone.com",
+      Cybozu: "https://sean.cybozu.com",
       "Dev.to": "https://dev.to",
-      Firebase: "https://console.firebase.google.com/u/0",
+      Porkbun: "https;//porkbun.com",
+      Netlify: "https://www.netlify.com/"
     },
   },
   {
-    category: "School",
+    category: "Finance",
     color: "red",
     items: {
-      Outlook: "https://outlook.office365.com/mail/inbox",
-      Canvas: "https://sit.instructure.com",
-      MyStevens: "https://login.stevens.edu/app/UserHome",
+      ETrade: "https://etrade.com/",
+      Wise: "https://wise.com",
+      Epos: "https://www.eposcard.co.jp/index.html"
     },
   },
   {
-    category: "Work",
-    color: "green",
-    items: {
-      Linkedin: "https://linkedin.com",
-      Twitter: "https://twitter.com",
-      Leetcode: "https://leetcode.com",
-      Handshake: "https://app.joinhandshake.com/stu/postings",
-      Indeed: "https://www.indeed.com/",
-    },
-  },
-  {
-    category: "Misc",
+    category: "Social",
     color: "purple",
     items: {
-      Trakt: "https://trakt.tv/users/peterrauscher/lists",
+      Reddit: "https://reddit.com",
+      Linkedin: "https://linkedin.com",
+      Twitter: "https://twitter.com",
       YouTube: "https://www.youtube.com/",
-      Fmovies: "https://fmovies.to/home",
-      Zoro: "https://zoro.to",
-      TempMail: "https://tempmail.email/",
-      // IPTorrents: "https://iptorrents.com/t",
+      Discord: "https://discord.com/channels/@me"
     },
-  },
+  }
 ];
