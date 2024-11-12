@@ -29,7 +29,8 @@ export default [
     items: {
       ETrade: "https://etrade.com/",
       Wise: "https://wise.com",
-      Epos: "https://www.eposcard.co.jp/index.html"
+      Epos: "https://www.eposcard.co.jp/index.html",
+      "Options Profit Calc": "https://www.optionsprofitcalculator.com/"
     },
   },
   {
