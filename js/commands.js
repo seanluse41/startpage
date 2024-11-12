@@ -1,9 +1,7 @@
-import executor from "./executors.js";
-
 export default [
   {
     name: ["search", "s"],
-    description: "Searches DuckDuckGo for the given query",
+    description: "Searches Google for the given query",
     execute: executor.search,
   },
   {
@@ -26,4 +24,9 @@ export default [
     description: "Displays the weather forecast",
     execute: executor.weather,
   },
+  {
+    name: ["*"],  // Catch-all command
+    description: "Search Google (type anything)",
+    execute: (args, fullCommand) => executor.search([fullCommand, ...args]),
+  }
 ];

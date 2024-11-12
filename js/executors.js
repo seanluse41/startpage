@@ -41,14 +41,14 @@ export default {
   search: (options) => {
     const query = options.join(" ") || null;
     if (query) {
-      window.location.href = `https://duckduckgo.com/?q=${encodeURIComponent(
-        query
-      )}`;
+        window.location.href = `https://www.google.com/search?q=${encodeURIComponent(
+            query
+        )}`;
     } else {
-      render("No query, redirecting to DDG!");
-      window.location.href = "https://duckduckgo.com";
+        render("No query, redirecting to Google!");
+        window.location.href = "https://www.google.com";
     }
-  },
+},
   ls: () => {
     if (shortcuts) {
       let shortcutsOutput = '<div class="shortcuts-container">';

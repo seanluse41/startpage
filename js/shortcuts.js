@@ -15,6 +15,15 @@ export default [
     },
   },
   {
+    category: "Gamedev",
+    color: "green",
+    items: {
+      "itch.io": "https://itch.io",
+      Steamworks: "https://partner.steamgames.com/",
+      "Godot Shaders": "https://godotshaders.com/"
+    },
+  },
+  {
     category: "Finance",
     color: "red",
     items: {
