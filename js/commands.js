@@ -25,10 +25,5 @@ export default [
     name: ["weather"],
     description: "Displays the weather forecast",
     execute: executors.weather,
-  },
-  {
-    name: ["*"], // Catch-all command
-    description: "Search Google (type anything)",
-    execute: (args, fullCommand) => executors.search([fullCommand, ...args]),
   }
 ];

@@ -51,7 +51,10 @@ input.addEventListener("keydown", function (e) {
           const processedUrl = processUrl(shortcutDetails[1]);
           render(`Redirecting to ${shortcutDetails[0]}...`);
           window.location.href = processedUrl;
-        } else error("yellow", command, "command not found");
+        } else {
+          // If no command or shortcut found, search for the entire input
+          executors.search([command, ...options]);
+        }
       }
     } catch (e) {
       error("red", "JS Error", e.message);
@@ -64,9 +67,8 @@ window.addEventListener("load", () => {
   executors.ls();
   let filenames = ["purple-flower.jpg", "purplelily.jpg", "purple-dune.jpg", "purple-mountains.jpg"];
   let root = document.getElementsByTagName("html")[0];
-  root.style.backgroundImage = `url("./backgrounds/${
-    filenames[Math.floor(Math.random() * filenames.length)]
-  }")`;
+  root.style.backgroundImage = `url("./backgrounds/${filenames[Math.floor(Math.random() * filenames.length)]
+    }")`;
   root.style.backgroundSize = "cover";
   root.style.backgroundPosition = "center";
 });
