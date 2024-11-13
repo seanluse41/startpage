@@ -11,7 +11,8 @@ export default [
       Netlify: "https://www.netlify.com/",
       Claude: "https://claude.ai",
       Stripe: "https://dashboard.stripe.com/",
-      "LINE Dev": "https://developers.line.biz/console/"
+      "LINE Dev": "https://developers.line.biz/console/",
+      AWS: "https://ap-northeast-1.console.aws.amazon.com/console/home?region=ap-northeast-1#"
     },
   },
   {
