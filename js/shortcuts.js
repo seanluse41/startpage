@@ -28,6 +28,7 @@ export default [
     category: "Finance",
     color: "red",
     items: {
+      Public: "https://public.com/",
       ETrade: "https://etrade.com/",
       Wise: "https://wise.com",
       Epos: "https://www.eposcard.co.jp/index.html",
