@@ -1,15 +1,14 @@
 import { dateDiffInMinutes, error, getWeather, render } from "./helpers.js";
 import shortcuts from "./shortcuts.js";
 
-// Helper function to process URLs (same as in main.js)
 function processUrl(url) {
-  // Check if it's a local IP address without protocol
+  // If it's a local IP address, return as is without adding protocol
   if (url.match(/^[\d.]+:\d+$/)) {
-    return `http://${url}`;
+      return url;
   }
   // If it already has a protocol, return as is
   if (url.startsWith('http://') || url.startsWith('https://')) {
-    return url;
+      return url;
   }
   // Add https:// for all other URLs
   return `https://${url}`;

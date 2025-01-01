@@ -7,7 +7,7 @@ export default [
       Kintone: "https://sean.kintone.com",
       Cybozu: "https://sean.cybozu.com",
       "Dev.to": "https://dev.to",
-      Porkbun: "https;//porkbun.com",
+      Porkbun: "https://porkbun.com",
       Netlify: "https://www.netlify.com/",
       Claude: "https://claude.ai",
       Stripe: "https://dashboard.stripe.com/",
@@ -52,6 +52,7 @@ export default [
     color: "yellow",
     items: {
       "Amazon JP": "https://amazon.co.jp",
+      "Maps": "https://maps.google.com",
       Immich: "192.168.50.110:2283",
       Jellyfin: "192.168.50.110:8096",
       Radarr: "192.168.50.110:7878",
