@@ -2,9 +2,9 @@ import { dateDiffInMinutes, error, getWeather, render } from "./helpers.js";
 import shortcuts from "./shortcuts.js";
 
 function processUrl(url) {
-  // If it's a local IP address, return as is without adding protocol
+  // If it's a local IP address, add http:// 
   if (url.match(/^[\d.]+:\d+$/)) {
-      return url;
+      return `http://${url}`;
   }
   // If it already has a protocol, return as is
   if (url.startsWith('http://') || url.startsWith('https://')) {
