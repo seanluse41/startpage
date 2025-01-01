@@ -56,6 +56,7 @@ export default [
       Immich: "192.168.50.110:2283",
       Jellyfin: "192.168.50.110:8096",
       Radarr: "192.168.50.110:7878",
+      Prowlarr: "192.168.50.110:9696",
       Drive: "https://drive.google.com"
     },
   }
